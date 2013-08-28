@@ -20,7 +20,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.1.percent.activate</string>
+			<string>batteryActivator.1.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
@@ -36,7 +36,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.2.percent.activate</string>
+			<string>batteryActivator.2.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
@@ -52,7 +52,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.3.percent.activate</string>
+			<string>batteryActivator.3.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
@@ -68,7 +68,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.4.percent.activate</string>
+			<string>batteryActivator.4.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
@@ -84,7 +84,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.5.percent.activate</string>
+			<string>batteryActivator.5.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
@@ -100,7 +100,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.10.percent.activate</string>
+			<string>batteryActivator.10.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
@@ -116,7 +116,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.15.percent.activate</string>
+			<string>batteryActivator.15.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
@@ -132,7 +132,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.20.percent.activate</string>
+			<string>batteryActivator.20.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
@@ -148,7 +148,7 @@
 			<key>bundle</key>
 			<string>LibActivator</string>
 			<key>activatorEvent</key>
-			<string>batteryActivator.25.percent.activate</string>
+			<string>batteryActivator.25.percent.draining</string>
 			<key>get</key>
 			<string>getActivatorAction:</string>
 			<key>batteryPercent</key>
