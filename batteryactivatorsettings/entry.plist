@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = BatteryActivatorSettings;
+	cell = PSLinkCell;
+	detail = BatteryActivatorSettingsListController;
+	icon = Icon.png;
+	isController = 1;
+	label = "BatteryActivator";
+    };
+}

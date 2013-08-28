@@ -1,0 +1,9 @@
+Package: com.bushe.BatteryActivator
+Name: BatteryActivator
+Depends: mobilesubstrate, libactivator
+Version: 0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Bushe
+Author: Bushe
+Section: Tweaks
