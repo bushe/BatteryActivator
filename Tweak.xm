@@ -21,7 +21,7 @@ int batteryLevel=100;
 - (void)batteryStatusDidChange:(id)batteryStatus{
 	if([[objc_getClass("SBUIController") sharedInstance] isBatteryCharging] == FALSE)
 		if(batteryLevel > (int)[[objc_getClass("SBUIController") sharedInstance] batteryCapacityAsPercentage])
-			LASendEventWithName([NSString stringWithFormat:@"batteryActivator.%i.percent.activate", [[objc_getClass("SBUIController") sharedInstance] batteryCapacityAsPercentage]]);
+			LASendEventWithName([NSString stringWithFormat:@"batteryActivator.%i.percent.draining", [[objc_getClass("SBUIController") sharedInstance] batteryCapacityAsPercentage]]);
 	
 	batteryLevel = (int)[[objc_getClass("SBUIController") sharedInstance] batteryCapacityAsPercentage];
 	%orig;
