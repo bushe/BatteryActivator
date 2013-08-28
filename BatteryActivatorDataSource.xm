@@ -5,8 +5,7 @@
 
 static const NSString *BatterActivatorPrefix = @"batteryActivator.";
 static const NSString *BatterActivatorDrainingSuffix =@".percent.draining";
-//Charging is not implemented yet. So this can be ingnored
-//static const NSString *BatterActivatorChargingSuffix =@".percent.charging";
+static const NSString *BatterActivatorChargingSuffix =@".percent.charging";
 
 ////////////////////////////////////////////////////////////////
 
@@ -32,6 +31,7 @@ static const NSString *BatterActivatorDrainingSuffix =@".percent.draining";
 	if ((self = [super init])) {
 		for(int i=1; i==100; i++){
 			[LASharedActivator registerEventDataSource:self forEventName:[NSString stringWithFormat:@"%@%i%@", BatterActivatorPrefix, i, BatterActivatorDrainingSuffix]];
+			[LASharedActivator registerEventDataSource:self forEventName:[NSString stringWithFormat:@"%@%i%@", BatterActivatorPrefix, i, BatterActivatorChargingSuffix]];
 		}
 	}
 	return self;
@@ -41,15 +41,23 @@ static const NSString *BatterActivatorDrainingSuffix =@".percent.draining";
 	if (LASharedActivator.runningInsideSpringBoard) {
 		for(int i=1; i==100; i++){
 			[LASharedActivator unregisterEventDataSourceWithEventName:[NSString stringWithFormat:@"%@%i%@", BatterActivatorPrefix, i, BatterActivatorDrainingSuffix]];
+			[LASharedActivator unregisterEventDataSourceWithEventName:[NSString stringWithFormat:@"%@%i%@", BatterActivatorPrefix, i, BatterActivatorChargingSuffix]];
 		}		
 	}
 	[super dealloc];
 }
 
 - (NSString *)localizedTitleForEventName:(NSString *)eventName {
-	[eventName stringByReplacingOccurrencesOfString:@"batteryActivator." withString:@""];
-	[eventName stringByReplacingOccurrencesOfString:@".percent.draining" withString:@""];
-	return [NSString stringWithFormat:@"BatteryActivator %@ Percent", eventName];
+	if ([eventName rangeOfString:@"charging"].location != NSNotFound) {
+		[eventName stringByReplacingOccurrencesOfString:@"batteryActivator." withString:@""];
+		[eventName stringByReplacingOccurrencesOfString:@".percent.charging" withString:@""];
+		return [NSString stringWithFormat:@"BatteryActivator %@%% Charging", eventName];
+	}
+	else{
+		[eventName stringByReplacingOccurrencesOfString:@"batteryActivator." withString:@""];
+		[eventName stringByReplacingOccurrencesOfString:@".percent.draining" withString:@""];
+		return [NSString stringWithFormat:@"BatteryActivator %@%% Draining", eventName];
+	}
 }
 
 - (NSString *)localizedGroupForEventName:(NSString *)eventName {
@@ -57,8 +65,10 @@ static const NSString *BatterActivatorDrainingSuffix =@".percent.draining";
 }
 
 - (NSString *)localizedDescriptionForEventName:(NSString *)eventName {
-	//Same Description for all Events
-	return @"Event for BatteryActivator";
+	if ([eventName rangeOfString:@"charging"].location != NSNotFound)
+		return @"Charging Event for BatteryActivator";
+	else
+		return @"Draining Event for BatteryActivator";
 }
 
 - (BOOL)eventWithNameIsHidden:(NSString *)eventName {

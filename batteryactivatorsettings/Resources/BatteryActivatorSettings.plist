@@ -8,13 +8,13 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>BatteryActivator</string>
+			<string>Draining Events</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>1% Percent</string>
+			<string>Drain to 1%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -30,7 +30,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>2% Percent</string>
+			<string>Drain to 2%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -46,7 +46,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>3% Percent</string>
+			<string>Drain to 3%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -62,7 +62,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>4% Percent</string>
+			<string>Drain to 4%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -78,7 +78,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>5% Percent</string>
+			<string>Drain to 5%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -94,7 +94,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>10% Percent</string>
+			<string>Drain to 10%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -110,7 +110,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>15% Percent</string>
+			<string>Drain to 15%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -126,7 +126,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>20% Percent</string>
+			<string>Drain to 20%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -142,7 +142,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
-			<string>25% Percent</string>
+			<string>Drain to 25%</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -154,6 +154,156 @@
 			<key>batteryPercent</key>
 			<string>25</string>
 		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Charging Events</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 1%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.1.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 2%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.2.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 3%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.3.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>3</string>			
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 4%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.4.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>4</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 5%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.5.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 10%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.10.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>10</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 15%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.15.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>15</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 20%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.20.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>20</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Charge to 25%</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorEvent</key>
+			<string>batteryActivator.25.percent.charging</string>
+			<key>get</key>
+			<string>getActivatorAction:</string>
+			<key>batteryPercent</key>
+			<string>25</string>
+		</dict>		
 	</array>
 	<key>title</key>
 	<string>BatteryActivator</string>
