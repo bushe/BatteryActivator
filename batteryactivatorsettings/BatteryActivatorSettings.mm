@@ -15,8 +15,12 @@
 }
 
 - (NSString *)getActivatorAction:(id)specifier{
-	return [LASharedActivator localizedTitleForListenerName:[LASharedActivator assignedListenerNameForEvent:[LAEvent eventWithName:[NSString stringWithFormat:@"batteryActivator.%@.percent.activate", [specifier propertyForKey:@"batteryPercent"]] mode:LAEventModeLockScreen]]];
+	if ([[specifier propertyForKey:@"activatorEvent"] rangeOfString:@"charging"].location != NSNotFound)
+		return [LASharedActivator localizedTitleForListenerName:[LASharedActivator assignedListenerNameForEvent:[LAEvent eventWithName:[NSString stringWithFormat:@"batteryActivator.%@.percent.charging", [specifier propertyForKey:@"batteryPercent"]] mode:LAEventModeLockScreen]]];
+	else
+		return [LASharedActivator localizedTitleForListenerName:[LASharedActivator assignedListenerNameForEvent:[LAEvent eventWithName:[NSString stringWithFormat:@"batteryActivator.%@.percent.draining", [specifier propertyForKey:@"batteryPercent"]] mode:LAEventModeLockScreen]]];
 }
+
 - (void)viewDidAppear:(BOOL)animated{
 	[self reload];
 	[super viewDidAppear:animated];
